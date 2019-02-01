@@ -10,8 +10,8 @@
 	<%
 		String username = request.getParameter("username");
 		String password = request.getParameter("password");
-		session.setAttribute("user", username);
-		
+		session.setAttribute("user", username); //放入会话， 之后用el接收
+
 		if ("qin".equals(username) && ("123".equals(password))) {
 			request.getRequestDispatcher("/welcome.jsp").forward(request, response);
 		} else if (username == "" || password == "") {
