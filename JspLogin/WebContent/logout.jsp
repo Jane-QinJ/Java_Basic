@@ -23,7 +23,7 @@
 			</div>
 		</div>
 	</div>
-	<div class="text-align:center">
+	<div class="text-align:center;">
 		<a href="welcome.jsp">欢迎继续购买</a>
 	</div>
 </body>

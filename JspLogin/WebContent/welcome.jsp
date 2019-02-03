@@ -17,10 +17,15 @@
 <script
 	src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <style>
+	body{
+		height: 581px;
+		background-image: url("../images/one.jpeg");
+	}
 	.footer{
 		text-align:center;
 		letter-spacing: 1em;
 	}
+	
 </style>
 </head>
 <body>
@@ -55,12 +60,12 @@
 					<table class="table table-striped">
 
 						<tr>
-							<th>id</th>
-							<th>price</th>
-							<th>name</th>
-							<th>info</th>
-							<th>author</th>
-							<th>add</th>
+							<th>Id</th>
+							<th>Name</th>
+							<th>Price</th>
+							<th>Info</th>
+							<th>Author</th>
+							<th>Add</th>
 						</tr>
 						<!-- i指当前商品的索引值  
 			此语句控制了每页最多显示3条
@@ -71,8 +76,8 @@
 						%>
 						<tr>
 							<td><%=booklist.get(i).getId()%></td>
-							<td><%=booklist.get(i).getPrice()%></td>
 							<td><%=booklist.get(i).getName()%></td>
+							<td><%=booklist.get(i).getPrice()%></td>
 							<td><%=booklist.get(i).getInfo()%></td>
 							<td><%=booklist.get(i).getAuthor()%></td>
 							<td><a

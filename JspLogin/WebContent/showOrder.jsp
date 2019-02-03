@@ -20,7 +20,7 @@
 
 
 
-	客户名：${user }
+	
 
 	<%
 		Cart cart = (Cart) session.getAttribute("cart");
@@ -36,6 +36,9 @@
 				</div>
 			</div>
 			<div class="panel-body">
+				<div class="bg-primary" style="font-size:17px;">
+				客户名：${user }
+				</div>
 				<table class="table table-striped">
 					<tr>
 						<th>id</th>

@@ -13,6 +13,11 @@
 <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
 <script
 	src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<style>
+	a{
+	text-decoration:none;
+	}
+</style>
 </head>
 <body>
 
@@ -33,11 +38,11 @@
 						<form action="updateServlet" method="post">
 							<table class="table table-striped">
 								<tr>
-									<th>id</th>
-									<th>name</th>
-									<th>price</th>
-									<th>quantity</th>
-									<th>delete</th>
+									<th>Id</th>
+									<th>Name</th>
+									<th>Price</th>
+									<th>Quantity</th>
+									<th>Delete</th>
 								</tr>
 								<a href="welcome.jsp">返回购物大厅</a>
 								<%
