@@ -18,13 +18,13 @@ public void play(){
        ShortMessage first = new ShortMessage();
         //Put the  Instruction  in the Message
         a.setMessage(144, 1, 20, 100);
-       first.setMessage(192, 1, 102, 100);
+
 //Make a new  MidiEvent  using the Message
         MidiEvent noteOn = new MidiEvent(a, 1);
-        MidiEvent noteOn2 = new MidiEvent(first,2);
+  
 //Add the MidiEvent to the  Track
         track.add(noteOn);
-      track.add(noteOn2);
+
 
         ShortMessage b = new ShortMessage();
         b.setMessage(128,1,44,100);
