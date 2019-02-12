@@ -17,15 +17,19 @@
 <script
 	src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <style>
-	body{
-		height: 581px;
-		background-image: url("../images/one.jpeg");
-	}
-	.footer{
-		text-align:center;
-		letter-spacing: 1em;
-	}
-	
+body {
+	height: 581px;
+	background-image: url("../images/one.jpeg");
+}
+
+.footer {
+	text-align: center;
+	letter-spacing: 1em;
+}
+
+.pic {
+	width: 200px;
+}
 </style>
 </head>
 <body>
@@ -49,6 +53,7 @@
 			pageIndex = Integer.parseInt(a);//用户点击页面的索引值
 		}
 	%>
+
 	<div class="container">
 		<div class="row">
 			<div class="panel-primary">
@@ -57,6 +62,9 @@
 						style="text-align: center; font-size: 18px;">商品列表</div>
 				</div>
 				<div class="panel-body">
+
+
+
 					<table class="table table-striped">
 
 						<tr>
@@ -71,18 +79,33 @@
 			此语句控制了每页最多显示3条
 			Math.min防止最后一页范围变为i<9 改用总条数7 i<7
 			 -->
+
+
 						<%
 							for (int i = (pageIndex - 1) * pageSize; i < Math.min(pageIndex * pageSize, rowCount); i++) {
 						%>
+
 						<tr>
+
 							<td><%=booklist.get(i).getId()%></td>
-							<td><%=booklist.get(i).getName()%></td>
+							<td>
+								<div class="pic">
+									<a href="#" class="thumbnail"> <img src="/upload/1.jpg">
+									</a>
+									<div class="caption text-center">
+										<p>
+											<a href="#"><%=booklist.get(i).getName()%></a>
+										</p>
+									</div>
+								</div>
+							</td>
 							<td><%=booklist.get(i).getPrice()%></td>
 							<td><%=booklist.get(i).getInfo()%></td>
 							<td><%=booklist.get(i).getAuthor()%></td>
 							<td><a
 								href="AddBookServlet?id=<%=booklist.get(i).getId()%>&name=<%=booklist.get(i).getName()%>&price=<%=booklist.get(i).getPrice()%>&quantity=<%=booklist.get(i).getQuantity()%>">yes</a></td>
 						</tr>
+
 						<%
 							}
 						%>
@@ -98,7 +121,7 @@
 					//如果第一页，first不显示
 					if (pageIndex != 1) {
 				%>
-				
+
 				<a href="welcome.jsp?i=1">First</a>
 				<%
 					}

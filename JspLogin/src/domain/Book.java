@@ -12,7 +12,9 @@ public class Book {
 	private String info;   //书的种类
 	private String author; //作者
 	private int quantity = 1;  //书的数量
+	private String pic; 
 	
+
 	public Book() {
 		
 	}
@@ -61,9 +63,15 @@ public class Book {
 	public void setAuthor(String author) {
 		this.author = author;
 	}
+	public String getPic() {
+		return pic;
+	}
+	public void setPic(String pic) {
+		this.pic = pic;
+	}
 	@Override
 	public String toString() {
 		// TODO Auto-generated method stub
-		return "Book[id"+id+",price"+price+",name"+name+",description"+info;
+		return "Book[id "+id+",price"+price+",name "+name+",description "+info+",pic "+pic;
 	}
 }

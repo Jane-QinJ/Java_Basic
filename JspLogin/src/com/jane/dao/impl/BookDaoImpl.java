@@ -26,7 +26,7 @@ public class BookDaoImpl implements BookDao{
 		ResultSet rs = null;
 		Book book = null;
 		ArrayList<Book> books = new ArrayList<Book>();
-		String sql = "select id,price,name,description,author from book";
+		String sql = "select id,price,name,description,author, pic from book";
 		try {
 			conn = DBUtils.getConnection();
 			ps = conn.prepareStatement(sql);
@@ -38,6 +38,7 @@ public class BookDaoImpl implements BookDao{
 				book.setName(rs.getString(3));
 				book.setInfo(rs.getString(4));
 				book.setAuthor(rs.getString(5));
+				book.setPic(rs.getString(6));
 				books.add(book);
 			}
 		}catch(SQLException e) {
