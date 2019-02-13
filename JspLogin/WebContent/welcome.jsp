@@ -18,8 +18,13 @@
 	src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <style>
 body {
-	height: 581px;
-	background-image: url("../images/one.jpeg");
+	background-image: url("/upload/one.jpeg");
+	background-repeat: no-repeat;
+
+
+}
+.container{
+
 }
 
 .footer {
@@ -28,7 +33,7 @@ body {
 }
 
 .pic {
-	width: 200px;
+	width: 100px;
 }
 </style>
 </head>
@@ -59,7 +64,7 @@ body {
 			<div class="panel-primary">
 				<div class="panel-heading">
 					<div class="panel-title"
-						style="text-align: center; font-size: 18px;">商品列表</div>
+						style="text-align: center; font-size: 18px;">购物大厅</div>
 				</div>
 				<div class="panel-body">
 
@@ -90,7 +95,8 @@ body {
 							<td><%=booklist.get(i).getId()%></td>
 							<td>
 								<div class="pic">
-									<a href="#" class="thumbnail"> <img src="/upload/1.jpg">
+									<a href="#" class="thumbnail"> <img
+										src="<%=booklist.get(i).getPic()%>">
 									</a>
 									<div class="caption text-center">
 										<p>

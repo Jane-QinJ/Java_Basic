@@ -17,6 +17,9 @@
 	a{
 	text-decoration:none;
 	}
+	body{
+		background-color: #56baed;
+}
 </style>
 </head>
 <body>

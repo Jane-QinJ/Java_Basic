@@ -15,6 +15,8 @@
 <style>
 body {
 	background-color: #56baed;
+	
+	
 }
 
 .col-md-4 {
