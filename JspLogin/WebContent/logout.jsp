@@ -23,8 +23,8 @@
 			</div>
 		</div>
 	</div>
-	<div class="text-align:center;">
-		<a href="welcome.jsp">欢迎继续购买</a>
+	<div style="text-align:center;">
+		<button class="btn btn-danger "><a style="color:white;" href="welcome.jsp">欢迎继续购买</a></button>
 	</div>
 </body>
 </html>

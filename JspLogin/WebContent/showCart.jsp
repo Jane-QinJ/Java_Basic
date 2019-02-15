@@ -16,10 +16,15 @@
 <style>
 	a{
 	text-decoration:none;
+	color:white;
 	}
-	body{
-		background-color: #56baed;
-}
+	.del{
+	color:red; 
+	font-size:32px;
+	position:relative;
+	left:16px;
+	bottom:5px;
+	}
 </style>
 </head>
 <body>
@@ -61,7 +66,7 @@
 
 										<td><input type="text" class="form-control"
 											name="quantity" value="<%=book.getQuantity()%>"></td>
-										<td><a href="deleteServlet?id=<%=book.getId()%>">delete</a>
+										<td><a class="del" href="deleteServlet?id=<%=book.getId()%>">-</a>
 										</td>
 									</tr>
 
@@ -70,21 +75,23 @@
 										}
 									%>
 									<tr>
-										<td colspan="5">totalPrice: <%=totalPrice%></td>
+										<td colspan="5">总金额：  <%=totalPrice%></td>
 
 									</tr>
 									<tr>
 										<td colspan="4"><button type="submit"
-												class="btn btn-danger pull-center">update</button></td>
+												class="btn btn-danger pull-center">刷新</button></td>
 										<td><button class="btn btn-danger ">
 												<a href="clearServlet">清空购物车</a>
 											</button></td>
 									</tr>
 							</table>
-
+							<div style="text-align:center;">
+		<button class="btn btn-danger pull-left"><a style="color:white;" href="welcome.jsp">返回购物车</a></button>
+	</div>
 							<h3>
 								<button class="btn btn-danger pull-right">
-									<a href="showOrder.jsp">submit order</a>
+									<a href="showOrder.jsp">提交订单</a>
 								</button>
 							</h3>
 						</form>

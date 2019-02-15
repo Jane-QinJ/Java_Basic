@@ -18,8 +18,7 @@
 	src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <style>
 body {
-	background-image: url("/upload/one.jpeg");
-	background-repeat: no-repeat;
+	
 
 
 }
