@@ -1,7 +1,11 @@
 import java.util.*;
 import java.io.*;
 
+
 public class Jukebox1{
+
+
+/*there will be four tokens for each song/line, and all four will be userd to create a new Song object. And the ArrayList will be type<Song> instead of <String>*/
 	ArrayList<Song> songList = new ArrayList<Song>();
 	public static void main(String[] args){
 		new Jukebox1().go();
@@ -30,6 +34,13 @@ public class Jukebox1{
 	void addSong(String lineToParse){
 		String[] tokens = lineToParse.split("/");
 		//only want the song title, so add only the first token to the SongList(the ArrayList)
-		songList.add(tokens[0]);
+		//songList.add(tokens[0]);
+
+		/*Create a new Song object using the four tokens
+(which means the four pieces of info in the song file
+for this line), then add the Song to the list.*/
+		Song nextSong = new Song(tokens[0],tokens[1],tokens[2],tokens[3]);
+		songList.add(nextSong);
+		
 }
 }
