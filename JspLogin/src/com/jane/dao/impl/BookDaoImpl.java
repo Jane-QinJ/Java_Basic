@@ -12,8 +12,8 @@ import com.util.db.DBUtils;
 import domain.Book;
 
 /**
- * BookDaoµÄ¾ßÌåÊµÏÖÀà
- * @author ÇØ¼Ñ
+ * BookDaoçš„å…·ä½“å®ç°ç±»
+ * @author ç§¦ä½³
  *
  */
 public class BookDaoImpl implements BookDao{
@@ -43,13 +43,13 @@ public class BookDaoImpl implements BookDao{
 			}
 		}catch(SQLException e) {
 			e.printStackTrace();
-			throw new SQLException("²éÑ¯ËùÓĞÊı¾İÊ§°Ü");
+			throw new SQLException("æŸ¥è¯¢æ‰€æœ‰æ•°æ®å¤±è´¥");
 		}finally {
 			DBUtils.close(rs, ps, conn);
 		}
 		return books;
 	}
 	/*
-	 * ²éÑ¯ËùÓĞÊı¾İ
+	 * æŸ¥è¯¢æ‰€æœ‰æ•°æ®
 	 */
 }

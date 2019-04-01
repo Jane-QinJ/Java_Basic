@@ -9,9 +9,9 @@ public class Cart {
 	private Hashtable<String, Book> ht = new Hashtable<>(); 
 	
 	public void addBook(String id, Book book) {
-		if(ht.containsKey(id)) { //ÅĞ¶ÏidÊÇ·ñ°üº¬
-			Book book_bought = ht.get(id); //ÒÑ¾­¹ºÂòµÄÊé
-			book_bought.setQuantity(book_bought.getQuantity()+1);//¼ÓÒ»
+		if(ht.containsKey(id)) { //åˆ¤æ–­idæ˜¯å¦åŒ…å«
+			Book book_bought = ht.get(id); //å·²ç»è´­ä¹°çš„ä¹¦
+			book_bought.setQuantity(book_bought.getQuantity()+1);//åŠ ä¸€
 			
 			
 		}else {
@@ -36,14 +36,14 @@ public class Cart {
 	public ArrayList<Book> showCart(){
 		ArrayList<Book> booklist = new ArrayList<Book>();
 		
-//		Iterator<String> iterator = ht.keySet().iterator();   //¼üÖµµü´ú  Ò²¾ÍÊÇid
+//		Iterator<String> iterator = ht.keySet().iterator();   //é”®å€¼è¿­ä»£  ä¹Ÿå°±æ˜¯id
 //		
 //		while(iterator.hasNext()) {
-//			String id = (String)iterator.next(); //ÓÃµü´úÆ÷µü´úËùÓĞid
-//			Book book = ht.get(id); //½«id·ÅÈëbook¼¯ºÏ
+//			String id = (String)iterator.next(); //ç”¨è¿­ä»£å™¨è¿­ä»£æ‰€æœ‰id
+//			Book book = ht.get(id); //å°†idæ”¾å…¥booké›†åˆ
 //			booklist.add(book);   
 //		}
-		//Ã¶¾Ù
+		//æšä¸¾
 		Enumeration<Book> elements = ht.elements();
 		while (elements.hasMoreElements()) {
 			Book book = (Book) elements.nextElement();
@@ -54,7 +54,7 @@ public class Cart {
 	
 	public double getTotalPrice() {
 		double totalPrice = 0;
-		Enumeration<Book> e = ht.elements();  //·µ»Ø±éÀúÖµ
+		Enumeration<Book> e = ht.elements();  //è¿”å›éå†å€¼
 		while(e.hasMoreElements()) {
 			Book book = e.nextElement();  //
 			totalPrice += book.getPrice()*book.getQuantity();
@@ -62,9 +62,9 @@ public class Cart {
 		return totalPrice;
 	}
 
-	//¸üĞÂÊé±¾ÊıÁ¿
+	//æ›´æ–°ä¹¦æœ¬æ•°é‡
 	public void updateBook(String id, String quantity) {
-		Book book = ht.get(id); //»ñµÃÊé¶ÔÏó
-		book.setQuantity(Integer.parseInt(quantity)); //¸üĞÂÊéµÄÊıÁ¿
+		Book book = ht.get(id); //è·å¾—ä¹¦å¯¹è±¡
+		book.setQuantity(Integer.parseInt(quantity)); //æ›´æ–°ä¹¦çš„æ•°é‡
 	}
 }

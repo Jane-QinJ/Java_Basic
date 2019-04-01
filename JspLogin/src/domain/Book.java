@@ -1,18 +1,17 @@
 package domain;
 /**
- * ÁìÓòÄ£ĞÍ£¬±íÊ¾ÊÇ¶ÔËü½øĞĞÔöÉ¾¸Ä²é¡£
+ * é¢†åŸŸæ¨¡å‹ï¼Œè¡¨ç¤ºæ˜¯å¯¹å®ƒè¿›è¡Œå¢åˆ æ”¹æŸ¥ã€‚
  */
-import java.util.ArrayList;
 
 public class Book {
 
-	private int id;			//ÊéµÄid
-	private Double price;	//¼Û¸ñ
-	private String name;	//ÊéÃû
-	private String info;   //ÊéµÄÖÖÀà
-	private String author; //×÷Õß
-	private int quantity = 1;  //ÊéµÄÊıÁ¿
-	private String pic; 
+	private int id;			//book id
+	private Double price;	//book price
+	private String name;	//book's name
+	private String info;   //book's info
+	private String author; //book's author
+	private int quantity = 1;  //book's quantity
+	private String pic;      //book's picture
 	
 
 	public Book() {
